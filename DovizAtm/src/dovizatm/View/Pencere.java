@@ -5,7 +5,7 @@
  */
 package dovizatm.View;
 
-import dovizatm.Controller.GuiActions;
+import dovizatm.Controller.UstPanelGuiActions;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -14,7 +14,6 @@ import javax.swing.JPanel;
 
 
 public class Pencere extends JFrame{
-    public KenarEkran kenarEkran;
     
     private static Pencere pencere = new Pencere();
     
@@ -24,11 +23,8 @@ public class Pencere extends JFrame{
         this.setVisible(true);
         this.setResizable(false);//Ekranı yeniden boyutlandırmayı devre dışı bırakır
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//Uygulamayı kapatınca build'u da durdurur.
-        GuiActions.GetNesne();
-        
-        kenarEkran = KenarEkran.getKenarekran();
-        this.add(kenarEkran);
-        
+ 
+        this.add(KenarEkran.getKenarekran());        
         this.revalidate();// nesnelerin ekrana sadece alt tab yapınca gelme hatasını çözdü.
     }
 

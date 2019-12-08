@@ -5,6 +5,7 @@
  */
 package dovizatm;
 
+import dovizatm.Controller.SystemMethods;
 import dovizatm.View.KenarEkran;
 import dovizatm.View.Pencere;
 
@@ -17,9 +18,8 @@ public class DovizAtm {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        Pencere pencereMain =  Pencere.getPencere();
-
+    public static void main(String[] args) { 
+        SystemMethods.sistemiKur();
     }
     
 }

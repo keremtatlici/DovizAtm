@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 public class KenarEkran extends JPanel{
     
-    public solPanel solPanel;
+    public solPanel solPanel ;
     public ustPanel ustPanel;
     public altPanel altPanel;
     public sagPanel sagPanel;
@@ -23,16 +23,16 @@ public class KenarEkran extends JPanel{
         sagPanel =  sagPanel.getSagpanel();
         altPanel =  altPanel.getAltpanel();
         
-        altPanel.Btn_KartTak.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent ae) {
-                altPanel.Btn_KartTak.setEnabled(false);
-                altPanel.Btn_KartTak.setText("Kart Takılı");
-                ustPanel.sifregirmeekrani.Btn_GirisYap.setEnabled(true);
-                
-                System.out.println(altPanel.Btn_KartTak.getText());
-            }
-        });
+//        altPanel.Btn_KartTak.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent ae) {
+//                altPanel.Btn_KartTak.setEnabled(false);
+//                altPanel.Btn_KartTak.setText("Kart Takılı");
+//                ustPanel.sifregirmeekrani.Btn_GirisYap.setEnabled(true);
+//                
+//                System.out.println(altPanel.Btn_KartTak.getText());
+//            }
+//        });
         ustPanel.kartliislemekrani.Btn_KartIade.addActionListener(new ActionListener(){
                 @Override
                 public void actionPerformed(ActionEvent e) {
