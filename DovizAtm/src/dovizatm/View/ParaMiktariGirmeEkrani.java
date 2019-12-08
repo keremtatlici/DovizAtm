@@ -5,6 +5,8 @@
  */
 package dovizatm.View;
 
+import dovizatm.Controller.ustPanelMethods;
+import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
@@ -14,12 +16,32 @@ import javax.swing.JTextField;
  * @author burak
  */
 public class ParaMiktariGirmeEkrani extends JPanel{
-    private JButton Btn_Onayla;
-    private JButton Btn_AnaEkranaDon;
-    private JButton Btn_GeriDon;
-    private JTextField Txtfield_ParaMiktari;
+    public JButton Btn_Onayla = new JButton("Onayla");
+    public JButton Btn_AnaEkranaDon = new JButton("Ana Ekrana Dön");
+    public JButton Btn_GeriDon = new JButton("Geri Dön");
+    public JTextField Txtfield_ParaMiktari = new JTextField("");
     private String DurumYazisi;
-    public ParaMiktariGirmeEkrani(){
+    
+    private static ParaMiktariGirmeEkrani paramiktarigirmeekrani = new ParaMiktariGirmeEkrani();
+    
+    private ParaMiktariGirmeEkrani(){
+        ustPanelMethods.tasarla(this);
+        
+        Btn_Onayla.setBounds(0,0,200,100);
+        Txtfield_ParaMiktari.setBounds(0,110,200,100);
+        Btn_GeriDon.setBounds(0,220,200,100);
+        Btn_AnaEkranaDon.setBounds(0,330,200,100);
+       
+        
+        this.add(Btn_Onayla);
+        this.add(Txtfield_ParaMiktari);
+        this.add(Btn_GeriDon);
+        this.add(Btn_AnaEkranaDon);
         
     }
+
+    public static ParaMiktariGirmeEkrani getParamiktarigirmeekrani() {
+        return paramiktarigirmeekrani;
+    }
+    
 }

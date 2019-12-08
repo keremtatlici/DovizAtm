@@ -6,6 +6,7 @@
 package dovizatm.View;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -14,10 +15,11 @@ import javax.swing.JTextField;
  * @author burak
  */
 public abstract class FaturaveHavale extends JPanel{
-    private JButton Btn_Ode;
-    private JButton Btn_AnaEkranaDon;
-    private JButton Btn_GeriDon;
-    private JTextField Txtfield_No;
+    public JButton Btn_Ode = new JButton("Öde");
+    public JButton Btn_AnaEkranaDon = new JButton("Ana Ekrana Dön");
+    public JButton Btn_GeriDon = new JButton("Geri Dön");
+    public JTextField Txtfield_No = new JTextField("");
+    public JLabel no;
     
     
 }

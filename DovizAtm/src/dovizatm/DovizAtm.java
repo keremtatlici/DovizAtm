@@ -18,8 +18,8 @@ public class DovizAtm {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Pencere pencereMain = new Pencere();
-        KenarEkran kenarekran = new KenarEkran(pencereMain);
+        Pencere pencereMain =  Pencere.getPencere();
+
     }
     
 }

@@ -1,23 +1,37 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dovizatm.View;
 
+import dovizatm.Controller.ustPanelMethods;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
 
-/**
- *
- * @author burak
- */
 public class AnaEkran extends JPanel{
-    private JButton Btn_KartsizIslem;
-    private JButton Btn_KartliIslem;
+    public JButton Btn_KartsizIslem;
+    public JButton Btn_KartliIslem;
     
-    public AnaEkran(){
+    private static AnaEkran anaekran = new AnaEkran();
+    
+    private AnaEkran(){
         
+        ustPanelMethods.tasarla(this);
+        
+        Btn_KartsizIslem = new JButton("Kartsız İşlem");
+        Btn_KartliIslem = new JButton("Kartlı İşlem");
+        
+        Btn_KartsizIslem.setBounds(0,0,200,100);
+        Btn_KartliIslem.setBounds(0,110,200,100);
+        
+        
+        this.add(Btn_KartsizIslem);
+        this.add(Btn_KartliIslem);
     }
+
+    public static AnaEkran getAnaekran() {
+        return anaekran;
+    }
+
 }
