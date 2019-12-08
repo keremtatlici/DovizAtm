@@ -11,7 +11,7 @@ import javax.swing.JTextField;
 
 
 public class SifreGirmeEkrani extends JPanel{
-    public JPasswordField Txtfield_Sifre = new JPasswordField("0000");
+    public JPasswordField Txtfield_Sifre = new JPasswordField("");
     public JButton Btn_GirisYap = new JButton("Giriş Yap");
     public JButton Btn_Iptal= new JButton("İptal");
     public JLabel uyari = new JLabel("Lütfen Bankamatiğe Kartınızı Takınız");

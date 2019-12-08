@@ -22,6 +22,9 @@ import dovizatm.View.ParaYatirmaEkrani;
 import dovizatm.View.SifreGirmeEkrani;
 import dovizatm.View.SuOdeEkrani;
 import dovizatm.View.TelefonOdeEkrani;
+import dovizatm.View.altPanel;
+import dovizatm.View.sagPanel;
+import dovizatm.View.solPanel;
 import dovizatm.View.ustPanel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -29,6 +32,11 @@ import java.awt.event.ActionListener;
 
 public class UstPanelGuiActions implements ActionListener{
     private static UstPanelGuiActions guiactions = new UstPanelGuiActions();
+    
+    private ustPanel ustpanel =  ustPanel.getUstpanel();
+    private solPanel solpanel =  solPanel.getSolpanel();
+    private sagPanel sagpanel =  sagPanel.getSagpanel();
+    private altPanel altpanel =  altPanel.getAltpanel();
     
     private AnaEkran anaekran =  AnaEkran.getAnaekran();
     private DogalgazOdeEkrani dogalgazodeekrani = DogalgazOdeEkrani.getDogalgazodeekrani();
@@ -47,8 +55,6 @@ public class UstPanelGuiActions implements ActionListener{
     private SifreGirmeEkrani sifregirmeekrani =  SifreGirmeEkrani.getSifregirmeekrani(); 
     private SuOdeEkrani suodeekrani =  SuOdeEkrani.getSuodeekrani();
     private TelefonOdeEkrani telefonodeekrani =  TelefonOdeEkrani.getTelefonodeekrani();
-    
-    private ustPanel ustpanel = ustPanel.getUstpanel();
     
     private UstPanelGuiActions(){
         anaekran.Btn_KartsizIslem.addActionListener(this);
@@ -151,8 +157,7 @@ public class UstPanelGuiActions implements ActionListener{
             ustpanel.c1.show(ustpanel, "faturaodeekrani");
             System.out.println("fatura öde ekranı");
             
-        }else if(ae.getSource() == dogalgazodeekrani.Btn_Ode){
-            
+        }else if(ae.getSource() == dogalgazodeekrani.Btn_Ode){           
             if(ustpanel.islem == "kartlı"){
                 ustpanel.c1.show(ustpanel, "paracinsisecmeekrani");
                 System.out.println("paracinsisecmeekranı");
@@ -259,12 +264,17 @@ public class UstPanelGuiActions implements ActionListener{
         }else if(ae.getSource() == kartliislemekrani.Btn_KartIade){
             
             ustpanel.c1.show(ustpanel, "anaekran");
+            
+            altpanel.Btn_KartTak.setEnabled(true);
+            altpanel.Btn_KartTak.setText("Atm'ye Kartı Tak");
+            ustpanel.sifregirmeekrani.Btn_GirisYap.setEnabled(false);
+            
             System.out.println("Ana Ekran");
             
         }else if(ae.getSource() == kartliislemekrani.Btn_ParaCek){
             
-            ustpanel.c1.show(ustpanel, "paracekekrani");
-            System.out.println("para cek ekranı");
+            ustpanel.c1.show(ustpanel, "paracinsisecmeekrani");
+            System.out.println("para cinsi secme ekranı");
             
             
         }else if(ae.getSource() == kartliislemekrani.Btn_ParaCevir){
@@ -274,8 +284,8 @@ public class UstPanelGuiActions implements ActionListener{
             
         }else if(ae.getSource() == kartliislemekrani.Btn_ParaYatir){
             
-            ustpanel.c1.show(ustpanel, "parayatirmaekrani");
-            System.out.println("para yatırma ekranı");
+            ustpanel.c1.show(ustpanel, "parayatirmabeklemeekrani");
+            System.out.println("para yatırma bekleme ekranı");
             
         }else if(ae.getSource() == kartsizislemekrani.Btn_FaturaOde){
             
@@ -384,8 +394,11 @@ public class UstPanelGuiActions implements ActionListener{
             
         }else if(ae.getSource() == sifregirmeekrani.Btn_GirisYap){
             
-            ustpanel.c1.show(ustpanel, "kartliislemekrani");
-            System.out.println("kartlı işlem ekranı");
+            if(ustpanel.sifregirmeekrani.Txtfield_Sifre.getText().equals(ModeldanCek.getKartSifresi()) && !altpanel.Btn_KartTak.isEnabled()){
+                ustpanel.c1.show(ustpanel, "kartliislemekrani");
+                System.out.println("kartlı işlem ekranı");
+            }
+            
             
         }else if(ae.getSource() == sifregirmeekrani.Btn_Iptal){
             

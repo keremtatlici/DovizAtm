@@ -18,6 +18,6 @@ public class SystemMethods {
     public static void sistemiKur(){
         Pencere.getPencere();
         UstPanelGuiActions.GetNesne();
-        KenarEkranGuiActions.getNesne();
+        AltPanelGuiActions.getNesne();
     }
 }

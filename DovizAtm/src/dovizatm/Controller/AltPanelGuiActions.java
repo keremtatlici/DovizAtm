@@ -17,8 +17,8 @@ import java.awt.event.ActionListener;
  *
  * @author krmtt
  */
-public class KenarEkranGuiActions implements ActionListener{
-    private static KenarEkranGuiActions guiactions = new KenarEkranGuiActions();
+public class AltPanelGuiActions implements ActionListener{
+    private static AltPanelGuiActions guiactions = new AltPanelGuiActions();
     private KenarEkran kenarekran = KenarEkran.getKenarekran();
     
         private ustPanel ustpanel =  ustPanel.getUstpanel();
@@ -26,37 +26,37 @@ public class KenarEkranGuiActions implements ActionListener{
         private sagPanel sagpanel =  sagPanel.getSagpanel();
         private altPanel altpanel =  altPanel.getAltpanel();
     
-    private KenarEkranGuiActions(){
-        altpanel.Btn_EuroCebeAt.addActionListener(this);
+    private AltPanelGuiActions(){
         altpanel.Btn_KartTak.addActionListener(this);
+        altpanel.Btn_EuroCebeAt.addActionListener(this);       
         altpanel.Btn_ParaYatir.addActionListener(this);
         altpanel.Btn_TLCebeAt.addActionListener(this);
-        
-        solpanel.Btn_TL5.addActionListener(this);
-        solpanel.Btn_TL10.addActionListener(this);
-        solpanel.Btn_TL20.addActionListener(this);
-        solpanel.Btn_TL50.addActionListener(this);
-        solpanel.Btn_TL100.addActionListener(this);
-        solpanel.Btn_TL200.addActionListener(this);
-        
-        sagpanel.Btn_Euro5.addActionListener(this);
-        sagpanel.Btn_Euro10.addActionListener(this);
-        sagpanel.Btn_Euro20.addActionListener(this);
-        sagpanel.Btn_Euro50.addActionListener(this);
-        sagpanel.Btn_Euro100.addActionListener(this);
-        sagpanel.Btn_Euro200.addActionListener(this);
     }
-    public static KenarEkranGuiActions getNesne() {
+    public static AltPanelGuiActions getNesne() {
         return guiactions;
     }
 
     @Override
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource() == altpanel.Btn_KartTak){
+            
             altpanel.Btn_KartTak.setEnabled(false);
             altpanel.Btn_KartTak.setText("Kart Takılı");
             ustpanel.sifregirmeekrani.Btn_GirisYap.setEnabled(true);
             System.out.println("sisteme kart takıldı ve giriş yap butonu aktif edildi");
+            
+        }else if(ae.getSource() == altpanel.Btn_EuroCebeAt){
+            
+            
+            
+        }else if(ae.getSource() == altpanel.Btn_ParaYatir){
+            
+            
+            
+        }else if(ae.getSource() == altpanel.Btn_TLCebeAt){
+            
+            
+            
         }
     }
     
