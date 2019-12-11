@@ -5,7 +5,10 @@
  */
 package dovizatm.View;
 
+import dovizatm.Controller.ModeldanCek;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -18,12 +21,20 @@ import javax.swing.border.Border;
  * @author krmtt
  */
 public class solPanel extends JPanel{
-    public JButton Btn_TL5, Btn_TL10, Btn_TL20, Btn_TL50, Btn_TL100, Btn_TL200;
+    public JButton Btn_TL5 = new JButton();
+    public JButton Btn_TL10 = new JButton();
+    public JButton Btn_TL20 = new JButton();
+    public JButton Btn_TL50 = new JButton();
+    public JButton Btn_TL100 = new JButton();
+    public JButton Btn_TL200 = new JButton();
     
-    public int Sayisi_TL5,Sayisi_TL10,Sayisi_TL20,Sayisi_TL50,Sayisi_TL100,Sayisi_TL200;
+    public JLabel label_TL5 = new JLabel();
+    public JLabel label_TL10 = new JLabel();
+    public JLabel label_TL20 = new JLabel();
+    public JLabel label_TL50 = new JLabel();
+    public JLabel label_TL100 = new JLabel();
+    public JLabel label_TL200 = new JLabel();
     
-    public JLabel label_TL5, label_TL10, label_TL20, label_TL50, label_TL100, label_TL200;
-   
     public solPanel solPanel;
     public Border blackline = BorderFactory.createLineBorder(Color.black);//Border tipi ayarlar
     
@@ -32,23 +43,7 @@ public class solPanel extends JPanel{
     private solPanel(){
        this.setLayout(null);
        this.setBounds(0, 0, 300, 768); // Sol Panel  300x768
-       this.setBorder(blackline);//Border ekler
-       
-        
-       Btn_TL5 = new JButton();
-       Btn_TL10 = new JButton();
-       Btn_TL20 = new JButton();
-       Btn_TL50 = new JButton();
-       Btn_TL100 = new JButton();
-       Btn_TL200 = new JButton();
-       
-       label_TL5 = new JLabel(Integer.toString(Sayisi_TL5));
-       label_TL10 = new JLabel(Integer.toString(Sayisi_TL10));
-       label_TL20 = new JLabel(Integer.toString(Sayisi_TL20));
-       label_TL50 = new JLabel(Integer.toString(Sayisi_TL50));
-       label_TL100 = new JLabel(Integer.toString(Sayisi_TL100));
-       label_TL200 = new JLabel(Integer.toString(Sayisi_TL200));
-       
+       this.setBorder(blackline);//Border ekler    
        
        Btn_TL5.setIcon(new ImageIcon("img\\TL5.jpg"));
        Btn_TL10.setIcon(new ImageIcon("img\\TL10.jpg"));
@@ -84,12 +79,19 @@ public class solPanel extends JPanel{
        this.add(label_TL50);
        this.add(label_TL100);
        this.add(label_TL200);
-        
-       this.repaint();
+       
     }
-
     public static solPanel getSolpanel() {
+        
+        update();
         return solpanel;
     }
-    
+    public static void update(){
+        solpanel.label_TL5.setText(Integer.toString(ModeldanCek.getKullaniciCepTL5Banknot()));
+        solpanel.label_TL10.setText(Integer.toString(ModeldanCek.getKullaniciCepTL10Banknot()));
+        solpanel.label_TL20.setText(Integer.toString(ModeldanCek.getKullaniciCepTL20Banknot()));
+        solpanel.label_TL50.setText(Integer.toString(ModeldanCek.getKullaniciCepTL50Banknot()));
+        solpanel.label_TL100.setText(Integer.toString(ModeldanCek.getKullaniciCepTL100Banknot()));
+        solpanel.label_TL200.setText(Integer.toString(ModeldanCek.getKullaniciCepTL200Banknot()));
+    }
 }

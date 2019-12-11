@@ -5,7 +5,9 @@
  */
 package dovizatm.Controller;
 
+import dovizatm.View.KenarEkran;
 import dovizatm.View.Pencere;
+import dovizatm.View.solPanel;
 
 /**
  *
@@ -16,8 +18,17 @@ public class SystemMethods {
         
     }
     public static void sistemiKur(){
-        Pencere.getPencere();
+        BaslangicSetIslemleri.BaslangicSet();//Başlangıç DB
+        
+        Pencere.getPencere();//Framne
+        
+        //Call Gui Actions
         UstPanelGuiActions.GetNesne();
         AltPanelGuiActions.getNesne();
+        SolPanelGuiActions.getNesne();
+        SagPanelGuiActions.getNesne();
+        
+        
+        
     }
 }

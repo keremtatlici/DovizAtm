@@ -1,5 +1,6 @@
 package dovizatm.View;
 
+import dovizatm.Controller.ModeldanCek;
 import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -11,12 +12,20 @@ import javax.swing.border.Border;
 
 public class sagPanel extends JPanel{
     
-     public JButton Btn_Euro5, Btn_Euro10, Btn_Euro20, Btn_Euro50, Btn_Euro100, Btn_Euro200;
-     
-     public int Sayisi_Euro5,Sayisi_Euro10,Sayisi_Euro20,Sayisi_Euro50,Sayisi_Euro100,Sayisi_Euro200 = 0;
-     
-     public JLabel label_Euro5, label_Euro10, label_Euro20, label_Euro50, label_Euro100, label_Euro200;
-      
+    public JButton Btn_Euro5 = new JButton();
+    public JButton Btn_Euro10 = new JButton();
+    public JButton Btn_Euro20 = new JButton();
+    public JButton Btn_Euro50 = new JButton();
+    public JButton Btn_Euro100 = new JButton();
+    public JButton Btn_Euro200 = new JButton();
+    
+    public JLabel label_Euro5 = new JLabel();
+    public JLabel label_Euro10 = new JLabel();
+    public JLabel label_Euro20 = new JLabel();
+    public JLabel label_Euro50 = new JLabel();
+    public JLabel label_Euro100 = new JLabel();
+    public JLabel label_Euro200 = new JLabel();
+    
     public Border blackline = BorderFactory.createLineBorder(Color.black);
     public sagPanel sagPanel;
     
@@ -26,23 +35,7 @@ public class sagPanel extends JPanel{
 
         this.setBounds(1066, 0, 300, 768);  // Sağ Panel 300x768
         this.setBorder(blackline);
-        this.setLayout(null);
-      
-        
-       Btn_Euro5 = new JButton();
-       Btn_Euro10 = new JButton();
-       Btn_Euro20 = new JButton();
-       Btn_Euro50 = new JButton();
-       Btn_Euro100 = new JButton();
-       Btn_Euro200 = new JButton();
-       
-       label_Euro5 = new JLabel(Integer.toString(Sayisi_Euro5));
-       label_Euro10 = new JLabel(Integer.toString(Sayisi_Euro10));
-       label_Euro20 = new JLabel(Integer.toString(Sayisi_Euro20));
-       label_Euro50 = new JLabel(Integer.toString(Sayisi_Euro50));
-       label_Euro100 = new JLabel(Integer.toString(Sayisi_Euro100));
-       label_Euro200 = new JLabel(Integer.toString(Sayisi_Euro200));
-       
+        this.setLayout(null);     
        
        Btn_Euro5.setIcon(new ImageIcon("img\\Euro5.jpg"));
        Btn_Euro10.setIcon(new ImageIcon("img\\Euro10.jpg"));
@@ -82,7 +75,15 @@ public class sagPanel extends JPanel{
     }
 
     public static sagPanel getSagpanel() {
+        update();
         return sagpanel;
     }
-
+    public static void update(){
+        sagpanel.label_Euro5.setText(Integer.toString(ModeldanCek.getKullaniciCepEuro5Banknot()));
+        sagpanel.label_Euro10.setText(Integer.toString(ModeldanCek.getKullaniciCepEuro10Banknot()));
+        sagpanel.label_Euro20.setText(Integer.toString(ModeldanCek.getKullaniciCepEuro20Banknot()));
+        sagpanel.label_Euro50.setText(Integer.toString(ModeldanCek.getKullaniciCepEuro50Banknot()));
+        sagpanel.label_Euro100.setText(Integer.toString(ModeldanCek.getKullaniciCepEuro100Banknot()));
+        sagpanel.label_Euro200.setText(Integer.toString(ModeldanCek.getKullaniciCepEuro200Banknot()));
+    }
 }
