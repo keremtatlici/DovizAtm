@@ -60,6 +60,20 @@ public class BaslangicSetIslemleri {
         ModeliSetle.setKullaniciElEuro100Banknot(0);
         ModeliSetle.setKullaniciElEuro200Banknot(0);
         
+        ModeliSetle.setKullaniciHesapTL5Banknot(2);
+        ModeliSetle.setKullaniciHesapTL10Banknot(2);
+        ModeliSetle.setKullaniciHesapTL20Banknot(2);
+        ModeliSetle.setKullaniciHesapTL50Banknot(2);
+        ModeliSetle.setKullaniciHesapTL100Banknot(2);
+        ModeliSetle.setKullaniciHesapTL200Banknot(2);
+        
+        ModeliSetle.setKullaniciHesapEuro5Banknot(2);
+        ModeliSetle.setKullaniciHesapEuro10Banknot(2);
+        ModeliSetle.setKullaniciHesapEuro20Banknot(2);
+        ModeliSetle.setKullaniciHesapEuro50Banknot(2);
+        ModeliSetle.setKullaniciHesapEuro100Banknot(2);
+        ModeliSetle.setKullaniciHesapEuro200Banknot(2);
+        
         
         BakiyeHesapla.TumBakiyeHesapla();
     }

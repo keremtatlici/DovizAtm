@@ -2,13 +2,14 @@ package dovizatm.Controller;
 
 import dovizatm.Model.AtmBakiye;
 import dovizatm.Model.AtmBanknot;
-import dovizatm.Model.Bakiye;
-import dovizatm.Model.BanknotSayisi;
 import dovizatm.Model.Kart;
 import dovizatm.Model.KullaniciCepBakiye;
 import dovizatm.Model.KullaniciCepBanknot;
 import dovizatm.Model.KullaniciElBakiye;
 import dovizatm.Model.KullaniciElBanknot;
+import dovizatm.Model.KullaniciHesapBakiye;
+import dovizatm.Model.KullaniciHesapBanknot;
+import dovizatm.Model.Kur;
 
 
 public class ModeldanCek {// tüm methodlar static olacak!!!!!
@@ -17,13 +18,22 @@ public class ModeldanCek {// tüm methodlar static olacak!!!!!
     private static AtmBakiye atmbakiye = AtmBakiye.getAtmbakiye();
     private static KullaniciCepBakiye kullanicicepbakiye = KullaniciCepBakiye.getKullanicicepbakiye();
     private static KullaniciElBakiye kullanicielbakiye = KullaniciElBakiye.getKullanicielbakiye();
+    private static KullaniciHesapBakiye kullanicihesapbakiye = KullaniciHesapBakiye.getKullanicihesapbakiye();
     
     private static AtmBanknot atmbanknot = AtmBanknot.getAtmbanknot();
     private static KullaniciCepBanknot kullanicicepbanknot = KullaniciCepBanknot.getKullanicicepbanknot();
     private static KullaniciElBanknot kullanicielbanknot = KullaniciElBanknot.getKullanicielbanknot();
+    private static KullaniciHesapBanknot kullanicihesapbanknot = KullaniciHesapBanknot.getKullanicihesapbanknot();
+    
+    
+    private static Kur kur = Kur.getKur();
     
     private ModeldanCek(){
         
+    }
+    
+    public static int getBirEuroKacTL(){
+        return kur.getBirEuroKacTL();
     }
     public static String getKartSifresi(){
         return kart.getKartSifresi();
@@ -53,6 +63,13 @@ public class ModeldanCek {// tüm methodlar static olacak!!!!!
     }
     public static int getKullaniciElEuroBakiye(){
         return kullanicielbakiye.getEuroSayisi();
+    }
+    //kullanıcı hesap bakiye
+    public static int getKullaniciHesapTLBakiye(){
+        return kullanicihesapbakiye.getTLSayisi();
+    }
+    public static int getKullaniciHesapEuroBakiye(){
+        return kullanicihesapbakiye.getEuroSayisi();
     }
     
     
@@ -173,5 +190,46 @@ public class ModeldanCek {// tüm methodlar static olacak!!!!!
     }
     public static int getKullaniciElEuro200Banknot(){
         return kullanicielbanknot.getEuro200Sayisi();
+    }
+    
+    
+    //Kullanici Hesap Banknot Sayisi TL
+    public static int getKullaniciHesapTL5Banknot(){
+        return kullanicihesapbanknot.getTL5Sayisi();
+    }
+    public static int getKullaniciHesapTL10Banknot(){
+        return kullanicihesapbanknot.getTL10Sayisi();
+    }
+    public static int getKullaniciHesapTL20Banknot(){
+        return kullanicihesapbanknot.getTL20Sayisi();
+    }
+    public static int getKullaniciHesapTL50Banknot(){
+        return kullanicihesapbanknot.getTL50Sayisi();
+    }
+    public static int getKullaniciHesapTL100Banknot(){
+        return kullanicihesapbanknot.getTL100Sayisi();
+    }
+    public static int getKullaniciHesapTL200Banknot(){
+        return kullanicihesapbanknot.getTL200Sayisi();
+    }
+    
+    //Kullanici Hesap Banknot Sayisi Euro
+    public static int getKullaniciHesapEuro5Banknot(){
+        return kullanicihesapbanknot.getEuro5Sayisi();
+    }
+    public static int getKullaniciHesapEuro10Banknot(){
+        return kullanicihesapbanknot.getEuro10Sayisi();
+    }
+    public static int getKullaniciHesapEuro20Banknot(){
+        return kullanicihesapbanknot.getEuro20Sayisi();
+    }
+    public static int getKullaniciHesapEuro50Banknot(){
+        return kullanicihesapbanknot.getEuro50Sayisi();
+    }
+    public static int getKullaniciHesapEuro100Banknot(){
+        return kullanicihesapbanknot.getEuro100Sayisi();
+    }
+    public static int getKullaniciHesapEuro200Banknot(){
+        return kullanicihesapbanknot.getEuro200Sayisi();
     }
 }

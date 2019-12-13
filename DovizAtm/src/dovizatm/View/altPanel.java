@@ -27,6 +27,10 @@ public class altPanel extends JPanel{
     public JLabel label_EldekiEuro = new JLabel();
     public Border blackline = BorderFactory.createLineBorder(Color.black);
     
+    public JLabel labelkur = new JLabel();
+    public JLabel labelbakiyeTL = new JLabel();
+    public JLabel labelbakiyeEuro = new JLabel();
+    
     private static altPanel altpanel = new altPanel();
   
     private altPanel(){
@@ -42,9 +46,17 @@ public class altPanel extends JPanel{
         
         label_EldekiTL.setBorder(blackline);
         label_EldekiEuro.setBorder(blackline);
+        labelkur.setBorder(blackline);
+        
+        labelbakiyeTL.setBorder(blackline);
+        labelbakiyeEuro.setBorder(blackline);
         
         label_EldekiTL.setBounds(0,40,170,100);
         label_EldekiEuro.setBounds(596,40,170,100);
+        
+        labelkur.setBounds(250,80,300,40);
+        labelbakiyeTL.setBounds(250,120,300,40);
+        labelbakiyeEuro.setBounds(250,160,300,40);
         
         
         this.add(Btn_TLCebeAt);
@@ -54,6 +66,12 @@ public class altPanel extends JPanel{
         
         this.add(label_EldekiTL);
         this.add(label_EldekiEuro);
+        this.add(labelkur);
+        this.add(labelbakiyeTL);
+        this.add(labelbakiyeEuro);
+        labelbakiyeTL.setVisible(false);
+        labelbakiyeEuro.setVisible(false);
+        Btn_ParaYatir.setEnabled(false);
         
     }
 
@@ -64,6 +82,10 @@ public class altPanel extends JPanel{
     public static void update(){
         altpanel.label_EldekiTL.setText("Elindeki TL : "+Integer.toString(ModeldanCek.getKullaniciElTLBakiye()) + " TL");
         altpanel.label_EldekiEuro.setText("Elindeki Euro : "+Integer.toString(ModeldanCek.getKullaniciElEuroBakiye())+ " Euro");
+        
+        altpanel.labelkur.setText("1 Euro "+ModeldanCek.getBirEuroKacTL() + " TL ediyor.");
+        altpanel.labelbakiyeTL.setText("Banka Hesabınızda "+ ModeldanCek.getKullaniciHesapTLBakiye()+ " TL var");
+        altpanel.labelbakiyeEuro.setText("Banka Hesabınızda "+ ModeldanCek.getKullaniciHesapEuroBakiye()+ " Euro var");
         
     }
 }

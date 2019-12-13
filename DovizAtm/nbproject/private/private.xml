@@ -3,13 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/AfterFormat/SoftwareEngineering/Code_Works/GithubUpdatedWorks/DovizAtm/DovizAtm/src/dovizatm/Controller/BaslangicSetIslemleri.java</file>
-            <file>file:/D:/AfterFormat/SoftwareEngineering/Code_Works/GithubUpdatedWorks/DovizAtm/DovizAtm/src/dovizatm/Controller/BakiyeHesapla.java</file>
-            <file>file:/D:/AfterFormat/SoftwareEngineering/Code_Works/GithubUpdatedWorks/DovizAtm/DovizAtm/src/dovizatm/Controller/SolPanelGuiActions.java</file>
+            <file>file:/D:/AfterFormat/SoftwareEngineering/Code_Works/GithubUpdatedWorks/DovizAtm/DovizAtm/src/dovizatm/Controller/SystemVariables.java</file>
+            <file>file:/D:/AfterFormat/SoftwareEngineering/Code_Works/GithubUpdatedWorks/DovizAtm/DovizAtm/src/dovizatm/Controller/ustPanelMethods.java</file>
             <file>file:/D:/AfterFormat/SoftwareEngineering/Code_Works/GithubUpdatedWorks/DovizAtm/DovizAtm/src/dovizatm/Controller/AltPanelGuiActions.java</file>
-            <file>file:/D:/AfterFormat/SoftwareEngineering/Code_Works/GithubUpdatedWorks/DovizAtm/DovizAtm/src/dovizatm/Controller/SystemMethods.java</file>
-            <file>file:/D:/AfterFormat/SoftwareEngineering/Code_Works/GithubUpdatedWorks/DovizAtm/DovizAtm/src/dovizatm/Controller/RePaint.java</file>
-            <file>file:/D:/AfterFormat/SoftwareEngineering/Code_Works/GithubUpdatedWorks/DovizAtm/DovizAtm/src/dovizatm/Controller/ModeliSetle.java</file>
+            <file>file:/D:/AfterFormat/SoftwareEngineering/Code_Works/GithubUpdatedWorks/DovizAtm/DovizAtm/src/dovizatm/View/ParaMiktariGirmeEkrani.java</file>
+            <file>file:/D:/AfterFormat/SoftwareEngineering/Code_Works/GithubUpdatedWorks/DovizAtm/DovizAtm/src/dovizatm/Controller/AltPanelMethods.java</file>
+            <file>file:/D:/AfterFormat/SoftwareEngineering/Code_Works/GithubUpdatedWorks/DovizAtm/DovizAtm/src/dovizatm/Controller/UstPanelGuiActions.java</file>
         </group>
     </open-files>
 </project-private>

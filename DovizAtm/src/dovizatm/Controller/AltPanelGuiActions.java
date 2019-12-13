@@ -47,59 +47,19 @@ public class AltPanelGuiActions implements ActionListener{
             
         }else if(ae.getSource() == altpanel.Btn_EuroCebeAt && ModeldanCek.getKullaniciElEuroBakiye() != 0){
             
-            EldekiEuroyuCebeAt();
+            AltPanelMethods.EldekiEuroyuCebeAt();
             
         }else if(ae.getSource() == altpanel.Btn_ParaYatir){
-            
+            if(SystemVariables.getIslem() == "ana-sifre-kartli-parayatirma"){
+                AltPanelMethods.kartliparayatir();
+            }
             
             
         }else if(ae.getSource() == altpanel.Btn_TLCebeAt && ModeldanCek.getKullaniciElTLBakiye() != 0){
-            EldekiTLyiCebeAt();
-            
+            AltPanelMethods.EldekiTLyiCebeAt();
             
         }
     }
     
-    public void EldekiTLyiCebeAt(){
-        
-        ModeliSetle.setKullaniciCepTL5Banknot(ModeldanCek.getKullaniciCepTL5Banknot() + ModeldanCek.getKullaniciElTL5Banknot());
-        ModeliSetle.setKullaniciCepTL10Banknot(ModeldanCek.getKullaniciCepTL10Banknot() + ModeldanCek.getKullaniciElTL10Banknot());
-        ModeliSetle.setKullaniciCepTL20Banknot(ModeldanCek.getKullaniciCepTL20Banknot() + ModeldanCek.getKullaniciElTL20Banknot());
-        ModeliSetle.setKullaniciCepTL50Banknot(ModeldanCek.getKullaniciCepTL50Banknot() + ModeldanCek.getKullaniciElTL50Banknot());
-        ModeliSetle.setKullaniciCepTL100Banknot(ModeldanCek.getKullaniciCepTL100Banknot() + ModeldanCek.getKullaniciElTL100Banknot());
-        ModeliSetle.setKullaniciCepTL200Banknot(ModeldanCek.getKullaniciCepTL200Banknot() + ModeldanCek.getKullaniciElTL200Banknot());
-        
-        RePaint.repaint();
-        
-        ModeliSetle.setKullaniciElTL5Banknot(0);
-        ModeliSetle.setKullaniciElTL10Banknot(0);
-        ModeliSetle.setKullaniciElTL20Banknot(0);
-        ModeliSetle.setKullaniciElTL50Banknot(0);
-        ModeliSetle.setKullaniciElTL100Banknot(0);
-        ModeliSetle.setKullaniciElTL200Banknot(0);
-        ModeliSetle.setKullaniciElTL200Banknot(0);// nedenini anlamadığım basit bir hatayı çözüyor.
-        
-        RePaint.repaint();
-    }
-    public void EldekiEuroyuCebeAt(){
-        ModeliSetle.setKullaniciCepEuro5Banknot(ModeldanCek.getKullaniciCepEuro5Banknot() + ModeldanCek.getKullaniciElEuro5Banknot());
-        ModeliSetle.setKullaniciCepEuro10Banknot(ModeldanCek.getKullaniciCepEuro10Banknot() + ModeldanCek.getKullaniciElEuro10Banknot());
-        ModeliSetle.setKullaniciCepEuro20Banknot(ModeldanCek.getKullaniciCepEuro20Banknot() + ModeldanCek.getKullaniciElEuro20Banknot());
-        ModeliSetle.setKullaniciCepEuro50Banknot(ModeldanCek.getKullaniciCepEuro50Banknot() + ModeldanCek.getKullaniciElEuro50Banknot());
-        ModeliSetle.setKullaniciCepEuro100Banknot(ModeldanCek.getKullaniciCepEuro100Banknot() + ModeldanCek.getKullaniciElEuro100Banknot());
-        ModeliSetle.setKullaniciCepEuro200Banknot(ModeldanCek.getKullaniciCepEuro200Banknot() + ModeldanCek.getKullaniciElEuro200Banknot());
-        
-        RePaint.repaint();
-        
-        ModeliSetle.setKullaniciElEuro5Banknot(0);
-        ModeliSetle.setKullaniciElEuro10Banknot(0);
-        ModeliSetle.setKullaniciElEuro20Banknot(0);
-        ModeliSetle.setKullaniciElEuro50Banknot(0);
-        ModeliSetle.setKullaniciElEuro100Banknot(0);
-        ModeliSetle.setKullaniciElEuro200Banknot(0);
-        ModeliSetle.setKullaniciElEuro200Banknot(0);// nedenini anlamadığım basit bir hatayı çözüyor.
-        
-        RePaint.repaint();
-    }
     
 }

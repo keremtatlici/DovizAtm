@@ -11,6 +11,8 @@ import dovizatm.Model.KullaniciCepBakiye;
 import dovizatm.Model.KullaniciCepBanknot;
 import dovizatm.Model.KullaniciElBakiye;
 import dovizatm.Model.KullaniciElBanknot;
+import dovizatm.Model.KullaniciHesapBakiye;
+import dovizatm.Model.KullaniciHesapBanknot;
 
 /**
  *
@@ -20,10 +22,12 @@ public class ModeliSetle {
     private static AtmBakiye atmbakiye = AtmBakiye.getAtmbakiye();
     private static KullaniciCepBakiye kullanicicepbakiye = KullaniciCepBakiye.getKullanicicepbakiye();
     private static KullaniciElBakiye kullanicielbakiye = KullaniciElBakiye.getKullanicielbakiye();
+    private static KullaniciHesapBakiye kullanicihesapbakiye = KullaniciHesapBakiye.getKullanicihesapbakiye();
     
     private static AtmBanknot atmbanknot = AtmBanknot.getAtmbanknot();
     private static KullaniciCepBanknot kullanicicepbanknot = KullaniciCepBanknot.getKullanicicepbanknot();
     private static KullaniciElBanknot kullanicielbanknot = KullaniciElBanknot.getKullanicielbanknot();
+    private static KullaniciHesapBanknot kullanicihesapbanknot = KullaniciHesapBanknot.getKullanicihesapbanknot();
     
     private ModeliSetle(){
         
@@ -54,6 +58,14 @@ public class ModeliSetle {
     public static void setKullaniciElEuroBakiye(int a){
          kullanicielbakiye.setEuroSayisi(a);
     }
+    //Kullanıcı hesap bakiye
+    public static void setKullaniciHesapTLBakiye(int a){
+        kullanicihesapbakiye.setTLSayisi(a);
+    }
+    public static void setKullaniciHesapEuroBakiye(int a){
+        kullanicihesapbakiye.setEuroSayisi(a);
+    }
+    
     
     
     //Atm Banknot Sayisi TL
@@ -209,5 +221,59 @@ public class ModeliSetle {
     public static void setKullaniciElEuro200Banknot(int a){
         BakiyeHesapla.TumBakiyeHesapla();
          kullanicielbanknot.setEuro200Sayisi(a);
+    }
+    
+    
+    
+    //Kullanici Hesap Banknot Sayisi TL
+    public static void setKullaniciHesapTL5Banknot(int a){
+        BakiyeHesapla.TumBakiyeHesapla();
+         kullanicihesapbanknot.setTL5Sayisi(a);
+    }
+    public static void setKullaniciHesapTL10Banknot(int a){
+        BakiyeHesapla.TumBakiyeHesapla();
+         kullanicihesapbanknot.setTL10Sayisi(a);
+    }
+    public static void setKullaniciHesapTL20Banknot(int a){
+        BakiyeHesapla.TumBakiyeHesapla();
+         kullanicihesapbanknot.setTL20Sayisi(a);
+    }
+    public static void setKullaniciHesapTL50Banknot(int a){
+        BakiyeHesapla.TumBakiyeHesapla();
+         kullanicihesapbanknot.setTL50Sayisi(a);
+    }
+    public static void setKullaniciHesapTL100Banknot(int a){
+        BakiyeHesapla.TumBakiyeHesapla();
+         kullanicihesapbanknot.setTL100Sayisi(a);
+    }
+    public static void setKullaniciHesapTL200Banknot(int a){
+        BakiyeHesapla.TumBakiyeHesapla();
+         kullanicihesapbanknot.setTL200Sayisi(a);
+    }
+   
+    //Kullanici Hesap Banknot Sayisi Euro
+    public static void setKullaniciHesapEuro5Banknot(int a){
+        BakiyeHesapla.TumBakiyeHesapla();
+         kullanicihesapbanknot.setEuro5Sayisi(a);
+    }
+    public static void setKullaniciHesapEuro10Banknot(int a){
+        BakiyeHesapla.TumBakiyeHesapla();
+         kullanicihesapbanknot.setEuro10Sayisi(a);
+    }
+    public static void setKullaniciHesapEuro20Banknot(int a){
+        BakiyeHesapla.TumBakiyeHesapla();
+         kullanicihesapbanknot.setEuro20Sayisi(a);
+    }
+    public static void setKullaniciHesapEuro50Banknot(int a){
+        BakiyeHesapla.TumBakiyeHesapla();
+         kullanicihesapbanknot.setEuro50Sayisi(a);
+    }
+    public static void setKullaniciHesapEuro100Banknot(int a){
+        BakiyeHesapla.TumBakiyeHesapla();
+         kullanicihesapbanknot.setEuro100Sayisi(a);
+    }
+    public static void setKullaniciHesapEuro200Banknot(int a){
+        BakiyeHesapla.TumBakiyeHesapla();
+         kullanicihesapbanknot.setEuro200Sayisi(a);
     }
 }

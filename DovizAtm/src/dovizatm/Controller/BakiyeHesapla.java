@@ -23,6 +23,9 @@ public class BakiyeHesapla {
         
         KullaniciElTLBakiyeHesapla();
         KullaniciElEuroBakiyeHesapla();
+        
+        KullaniciHesapTLBakiyeHesapla();
+        KullaniciHesapEuroBakiyeHesapla();
     }
     public static void AtmTLBakiyeHesapla(){
         a = 0;
@@ -91,5 +94,29 @@ public class BakiyeHesapla {
         a = a+ ModeldanCek.getKullaniciElEuro200Banknot()*200;
         
         ModeliSetle.setKullaniciElEuroBakiye(a);
+    }  
+    
+     public static void KullaniciHesapTLBakiyeHesapla(){
+        a = 0;
+        a = a + ModeldanCek.getKullaniciHesapTL5Banknot() * 5;
+        a = a+ ModeldanCek.getKullaniciHesapTL10Banknot()*10;
+        a = a+ ModeldanCek.getKullaniciHesapTL20Banknot()*20;
+        a = a+ ModeldanCek.getKullaniciHesapTL50Banknot()*50;
+        a = a+ ModeldanCek.getKullaniciHesapTL100Banknot()*100;
+        a = a+ ModeldanCek.getKullaniciHesapTL200Banknot()*200;
+        
+        ModeliSetle.setKullaniciHesapTLBakiye(a);
     }
+    public static void KullaniciHesapEuroBakiyeHesapla(){
+        a = 0;
+        a = a+ ModeldanCek.getKullaniciHesapEuro5Banknot() * 5;
+        a = a+ ModeldanCek.getKullaniciHesapEuro10Banknot()*10;
+        a = a+ ModeldanCek.getKullaniciHesapEuro20Banknot()*20;
+        a = a+ ModeldanCek.getKullaniciHesapEuro50Banknot()*50;
+        a = a+ ModeldanCek.getKullaniciHesapEuro100Banknot()*100;
+        a = a+ ModeldanCek.getKullaniciHesapEuro200Banknot()*200;
+        
+        ModeliSetle.setKullaniciHesapEuroBakiye(a);
+    }
+    
 }

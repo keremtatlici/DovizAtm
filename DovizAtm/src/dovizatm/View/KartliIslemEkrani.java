@@ -23,34 +23,20 @@ public class KartliIslemEkrani extends JPanel{
     public String Kur;
     public int BakiyeEuro,BakiyeTL;
     
-    public JLabel labelBakiyeTL = new JLabel();
-    public JLabel labelBakiyeEuro = new JLabel();
-    public JLabel labelKur = new JLabel();
+
     
     private static KartliIslemEkrani kartliislemekrani = new KartliIslemEkrani();
     
     private KartliIslemEkrani(){
         ustPanelMethods.tasarla(this);
         
-        labelBakiyeTL.setText("Hesaptaki Toplam TL : " + BakiyeTL +" TL");
-        labelBakiyeEuro.setText("Hesaptaki Toplam Euro : " + BakiyeEuro +" €");
-        labelKur.setText("Euro/TL Kuru: "+Kur);
-        
-        Btn_FaturaOde.setBounds(0,0,200,100);
-        
-        labelBakiyeTL.setBounds(220,0,200,100);
-        labelBakiyeEuro.setBounds(220,110,200,100);
-        labelKur.setBounds(220,220,200,100);
-        
+        Btn_FaturaOde.setBounds(0,0,200,100);     
+
         Btn_HavaleYap.setBounds(0,110,200,100);
         Btn_ParaCek.setBounds(0,220,200,100);
         Btn_ParaYatir.setBounds(0,330,200,100);
         Btn_ParaCevir.setBounds(566,0,200,100);
         Btn_KartIade.setBounds(566,110,200,100);
-        
-        this.add(labelKur);
-        this.add(labelBakiyeTL);
-        this.add(labelBakiyeEuro);
         
         this.add(Btn_FaturaOde);
         this.add(Btn_HavaleYap);
