@@ -89,4 +89,23 @@ public class AltPanelMethods { // All methods should be static!!
         
         RePaint.repaint();
     }
+    public static void kartsizparayolla(){
+        ModeliSetle.setKullaniciElTL5Banknot(0);
+        ModeliSetle.setKullaniciElTL10Banknot(0);
+        ModeliSetle.setKullaniciElTL20Banknot(0);
+        ModeliSetle.setKullaniciElTL50Banknot(0);
+        ModeliSetle.setKullaniciElTL100Banknot(0);
+        ModeliSetle.setKullaniciElTL200Banknot(0);
+        
+        ModeliSetle.setKullaniciElEuro5Banknot(0);
+        ModeliSetle.setKullaniciElEuro10Banknot(0);
+        ModeliSetle.setKullaniciElEuro20Banknot(0);
+        ModeliSetle.setKullaniciElEuro50Banknot(0);
+        ModeliSetle.setKullaniciElEuro100Banknot(0);
+        ModeliSetle.setKullaniciElEuro200Banknot(0);
+        
+        ModeliSetle.setKullaniciElEuro200Banknot(0);
+        
+        RePaint.repaint();
+    }
 }

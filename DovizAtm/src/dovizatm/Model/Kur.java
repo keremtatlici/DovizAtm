@@ -11,7 +11,7 @@ package dovizatm.Model;
  */
 public class Kur {
     private static Kur kur = new Kur();
-    private int BirEuroKacTL = 2;
+    private int BirEuroKacTL = 5;
     
     private Kur(){
         

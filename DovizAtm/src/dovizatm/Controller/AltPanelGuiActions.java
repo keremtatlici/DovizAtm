@@ -52,6 +52,8 @@ public class AltPanelGuiActions implements ActionListener{
         }else if(ae.getSource() == altpanel.Btn_ParaYatir){
             if(SystemVariables.getIslem() == "ana-sifre-kartli-parayatirma"){
                 AltPanelMethods.kartliparayatir();
+            }else{
+                AltPanelMethods.kartsizparayolla();
             }
             
             

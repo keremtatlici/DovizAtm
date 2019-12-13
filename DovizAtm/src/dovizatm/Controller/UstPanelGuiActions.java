@@ -183,6 +183,7 @@ public class UstPanelGuiActions implements ActionListener{
                 SystemVariables.setIslem("ana-kartsiz-fatura-dogalgaz-parayatirma");
                 System.out.println(SystemVariables.getIslem());
                 ustpanel.c1.show(ustpanel, "parayatirmabeklemeekrani");
+                altpanel.Btn_ParaYatir.setEnabled(true);
             }
             
         }else if(ae.getSource() == elektrikodeekrani.Btn_AnaEkranaDon){
@@ -230,6 +231,7 @@ public class UstPanelGuiActions implements ActionListener{
                 SystemVariables.setIslem("ana-kartsiz-fatura-elektrik-parayatirma");
                 System.out.println(SystemVariables.getIslem());
                 ustpanel.c1.show(ustpanel, "parayatirmabeklemeekrani");
+                altpanel.Btn_ParaYatir.setEnabled(true);
             }
             
         }else if(ae.getSource() == faturaodeekrani.Btn_AnaEkranaDon){
@@ -336,6 +338,7 @@ public class UstPanelGuiActions implements ActionListener{
                 SystemVariables.setIslem("ana-kartsiz-havale-parayatirma");
                 System.out.println(SystemVariables.getIslem());
                 ustpanel.c1.show(ustpanel, "parayatirmabeklemeekrani");
+                altpanel.Btn_ParaYatir.setEnabled(true);
             }
             
         }else if(ae.getSource() == kartliislemekrani.Btn_FaturaOde){
@@ -532,9 +535,17 @@ public class UstPanelGuiActions implements ActionListener{
                 
                 
             }else if(SystemVariables.getIslem() == "ana-sifre-kartli-paracevir-paramiktari"){
-                //Para Kullanıcı bakiyesinde Euro TL olarak dönecek
+                try{
+                    ustPanelMethods.ParaCevir(Integer.valueOf(paramiktarigirmeekrani.Txtfield_ParaMiktari.getText()));
+                }catch(Exception e){
+                    System.out.println("yazılan string inte çevirilemiyor");
+                }
             }else{
-                //Para Boşluğa gider
+                try{
+                    ustPanelMethods.ParaYolla(Integer.valueOf(paramiktarigirmeekrani.Txtfield_ParaMiktari.getText()));
+                }catch(Exception e){
+                    System.out.println("yazılan string inte çevirilemiyor");
+                }
             }
             
         }else if(ae.getSource() == parayatirmabeklemeekrani.Btn_AnaEkranaDon){
@@ -616,6 +627,7 @@ public class UstPanelGuiActions implements ActionListener{
                 SystemVariables.setIslem("ana-kartsiz-fatura-su-parayatirma");
                 System.out.println(SystemVariables.getIslem());
                 ustpanel.c1.show(ustpanel, "parayatirmabeklemeekrani");
+                altpanel.Btn_ParaYatir.setEnabled(true);
             }
             
         }else if(ae.getSource() == telefonodeekrani.Btn_AnaEkranaDon){
@@ -661,6 +673,7 @@ public class UstPanelGuiActions implements ActionListener{
                 SystemVariables.setIslem("ana-kartsiz-fatura-telefon-parayatirma");
                 System.out.println(SystemVariables.getIslem());
                 ustpanel.c1.show(ustpanel, "parayatirmabeklemeekrani");
+                altpanel.Btn_ParaYatir.setEnabled(true);
             }
             
         }
