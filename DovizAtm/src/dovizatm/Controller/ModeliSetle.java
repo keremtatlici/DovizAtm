@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dovizatm.Controller;
 
 import dovizatm.Model.AtmBakiye;
@@ -14,10 +10,6 @@ import dovizatm.Model.KullaniciElBanknot;
 import dovizatm.Model.KullaniciHesapBakiye;
 import dovizatm.Model.KullaniciHesapBanknot;
 
-/**
- *
- * @author krmtt
- */
 public class ModeliSetle {
     private static AtmBakiye atmbakiye = AtmBakiye.getAtmbakiye();
     private static KullaniciCepBakiye kullanicicepbakiye = KullaniciCepBakiye.getKullanicicepbakiye();

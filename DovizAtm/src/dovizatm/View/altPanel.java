@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dovizatm.View;
 
 import dovizatm.Controller.ModeldanCek;
@@ -13,10 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
 
-/**
- *
- * @author krmtt
- */
+
 public class altPanel extends JPanel{
     
     public JButton Btn_TLCebeAt = new JButton("Eldeki TL'yi Cebe At");;

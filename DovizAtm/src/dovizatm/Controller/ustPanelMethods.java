@@ -1,9 +1,7 @@
 package dovizatm.Controller;
 
 import java.awt.Color;
-import javax.swing.BorderFactory;
 import javax.swing.JPanel;
-import javax.swing.border.Border;
 
 public class ustPanelMethods {
     private static int adet,adet2,b;

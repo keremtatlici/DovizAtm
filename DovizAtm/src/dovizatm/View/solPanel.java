@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dovizatm.View;
 
 import dovizatm.Controller.ModeldanCek;
 import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -16,10 +10,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
 
-/**
- *
- * @author krmtt
- */
 public class solPanel extends JPanel{
     public JButton Btn_TL5 = new JButton();
     public JButton Btn_TL10 = new JButton();

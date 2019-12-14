@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dovizatm.View;
 
 import dovizatm.Controller.ustPanelMethods;
@@ -12,10 +8,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-/**
- *
- * @author burak
- */
 public class HavaleYapEkrani extends JPanel{
     public JButton Btn_ParaGonder = new JButton("Parayı Gönder");
     public JButton Btn_AnaEkranaDon = new JButton("Ana Ekrana Dön");

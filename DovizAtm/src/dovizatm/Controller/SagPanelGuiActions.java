@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package dovizatm.Controller;
 
 import dovizatm.View.KenarEkran;
@@ -13,10 +9,6 @@ import dovizatm.View.ustPanel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- *
- * @author krmtt
- */
 public class SagPanelGuiActions implements ActionListener{
     private static SagPanelGuiActions sagpanelguiactions = new SagPanelGuiActions();
     private KenarEkran kenarekran = KenarEkran.getKenarekran();

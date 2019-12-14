@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dovizatm.Controller;
 
 import dovizatm.View.AnaEkran;
@@ -10,7 +5,6 @@ import dovizatm.View.DogalgazOdeEkrani;
 import dovizatm.View.ElektrikOdeEkrani;
 import dovizatm.View.FaturaOdeEkrani;
 import dovizatm.View.HavaleYapEkrani;
-import dovizatm.View.IslemBasariliEkrani;
 import dovizatm.View.KartliIslemEkrani;
 import dovizatm.View.KartsizIslemEkrani;
 import dovizatm.View.ParaCekEkrani;
@@ -18,7 +12,6 @@ import dovizatm.View.ParaCevirEkrani;
 import dovizatm.View.ParaCinsiSecmeEkrani;
 import dovizatm.View.ParaMiktariGirmeEkrani;
 import dovizatm.View.ParaYatirmaBeklemeEkrani;
-import dovizatm.View.ParaYatirmaEkrani;
 import dovizatm.View.SifreGirmeEkrani;
 import dovizatm.View.SuOdeEkrani;
 import dovizatm.View.TelefonOdeEkrani;
@@ -43,7 +36,6 @@ public class UstPanelGuiActions implements ActionListener{
     private ElektrikOdeEkrani elektrikodeekrani = ElektrikOdeEkrani.getElektrikodeekrani();
     private FaturaOdeEkrani faturaodeekrani = FaturaOdeEkrani.getFaturaodeekrani();
     private HavaleYapEkrani havaleyapekrani =  HavaleYapEkrani.getHavaleyapekrani();
-    private IslemBasariliEkrani islembasariliekrani = IslemBasariliEkrani.getIslembasariliekrani();
     private KartliIslemEkrani kartliislemekrani =  KartliIslemEkrani.getKartliislemekrani();
     private KartsizIslemEkrani kartsizislemekrani =  KartsizIslemEkrani.getKartsizislemekrani();
     private ParaCekEkrani paracekekrani =  ParaCekEkrani.getParacekekrani();
@@ -51,7 +43,6 @@ public class UstPanelGuiActions implements ActionListener{
     private ParaCinsiSecmeEkrani paracinsisecmeekrani =  ParaCinsiSecmeEkrani.getParacinsisecmeekrani();
     private ParaMiktariGirmeEkrani paramiktarigirmeekrani =  ParaMiktariGirmeEkrani.getParamiktarigirmeekrani();
     private ParaYatirmaBeklemeEkrani parayatirmabeklemeekrani =  ParaYatirmaBeklemeEkrani.getParayatirmabeklemeekrani();
-    private ParaYatirmaEkrani parayatirmaekrani =  ParaYatirmaEkrani.getParayatirmaekrani();
     private SifreGirmeEkrani sifregirmeekrani =  SifreGirmeEkrani.getSifregirmeekrani(); 
     private SuOdeEkrani suodeekrani =  SuOdeEkrani.getSuodeekrani();
     private TelefonOdeEkrani telefonodeekrani =  TelefonOdeEkrani.getTelefonodeekrani();
@@ -76,8 +67,6 @@ public class UstPanelGuiActions implements ActionListener{
         
         havaleyapekrani.Btn_AnaEkranaDon.addActionListener(this);
         havaleyapekrani.Btn_ParaGonder.addActionListener(this);
-        
-        islembasariliekrani.Btn_anasayfayadon.addActionListener(this);
         
         kartliislemekrani.Btn_FaturaOde.addActionListener(this);
         kartliislemekrani.Btn_HavaleYap.addActionListener(this);
@@ -106,9 +95,6 @@ public class UstPanelGuiActions implements ActionListener{
         paramiktarigirmeekrani.Btn_Onayla.addActionListener(this);
         
         parayatirmabeklemeekrani.Btn_AnaEkranaDon.addActionListener(this);
-        
-        parayatirmaekrani.Btn_AnaEkranaDon.addActionListener(this);
-        parayatirmaekrani.Btn_Yatir.addActionListener(this);
         
         sifregirmeekrani.Btn_GirisYap.addActionListener(this);
         sifregirmeekrani.Btn_Iptal.addActionListener(this);
